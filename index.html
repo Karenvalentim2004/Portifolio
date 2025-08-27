@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Seu Nome</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">KRV</div>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Olá, eu sou <span class="typing"></span> 👋</h1>
+      <p>Front-End Developer focado em criar experiências incríveis na web.</p>
+      <a href="#projetos" class="btn">Veja meus projetos</a>
+    </div>
+    <div class="hero-image">
+      <img src="dev-illustration.png" alt="Ilustração Dev">
+    </div>
+    <canvas id="particles"></canvas>
+  </section>
+
+  <!-- Sobre Mim -->
+<section id="sobre" class="sobre" data-aos="fade-up">
+  <h2>Sobre Mim</h2>
+  <div class="sobre-content">
+    <div class="perfil">
+      <img src="imagens/perfil.jpg" alt="Foto Perfil">
+    </div>
+    <div class="texto">
+      <p>Sou desenvolvedor focado em <strong>Front-end</strong> usando tecnologias modernas como HTML, CSS, JavaScript e React. 🚀</p>
+      <ul>
+        <li>💻 Front-end</li>
+        <li>🚀 Objetivos</li>
+        <li>📚 Estudo constante</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Projetos -->
+  <section id="projetos" class="projetos" data-aos="fade-up">
+    <h2>Projetos</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="projeto1.jpg" alt="Projeto 1">
+        <div class="overlay">
+          <h3>Projeto 1</h3>
+          <p>Descrição breve do projeto.</p>
+          <a href="#" class="btn">Demo</a>
+          <a href="#" class="btn">GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="projeto2.jpg" alt="Projeto 2">
+        <div class="overlay">
+          <h3>Projeto 2</h3>
+          <p>Descrição breve do projeto.</p>
+          <a href="#" class="btn">Demo</a>
+          <a href="#" class="btn">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills" data-aos="fade-up">
+    <h2>Skills</h2>
+    <div class="skill">
+      <p>HTML</p>
+      <div class="bar"><span style="width: 90%"></span></div>
+    </div>
+    <div class="skill">
+      <p>CSS</p>
+      <div class="bar"><span style="width: 80%"></span></div>
+    </div>
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="bar"><span style="width: 75%"></span></div>
+    </div>
+    <div class="skill">
+      <p>React</p>
+      <div class="bar"><span style="width: 70%"></span></div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato" data-aos="fade-up">
+    <h2>Contato</h2>
+    <form>
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Mensagem" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <a href="https://wa.me/seunumerowhatsapp" class="whatsapp-btn">💬 WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 | Feito com 💙 por Seu Nome</p>
+    <div class="socials">
+      <a href="#">GitHub</a> | <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
