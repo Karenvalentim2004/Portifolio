@@ -1,5 +1,5 @@
 // Typing Animation
-const text = "Karen Valentim | Front-End Developer";
+const text = "Karen Valentim";
 let i = 0;
 function typing() {
   if (i < text.length) {
