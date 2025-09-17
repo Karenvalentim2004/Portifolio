@@ -14,6 +14,7 @@
 }
 
 body {
+    text-align: center;
     -family: "Poppins", sans-serif;
     background: var(--azul-escuro);
     color: var(--branco);
@@ -109,18 +110,17 @@ body {
 
 
 /* Sobre */
+
+
+
 .sobre-content {
     display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 3rem 1rem;
     gap: 2rem;
     flex-wrap: wrap;
-}
-
-.sobre-content img {
-    width: 200px;
-    border-radius: 50%;
-    border: 3px solid var(--azul-principal);
 }
 
 /* Projetos */
@@ -163,30 +163,6 @@ body {
     opacity: 1;
 }
 
-/* Skills */
-.skill {
-    margin-bottom: 1rem;
-}
-
-.bar {
-    background: #112240;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.bar span {
-    display: block;
-    height: 10px;
-    background: var(--azul-principal);
-    animation: grow 2s ease;
-}
-
-@keyframes grow {
-    from {
-        width: 0;
-    }
-}
-
 /* Contato */
 .contato form {
     display: flex;
@@ -216,17 +192,17 @@ body {
 }
 
 /* Footer */
+
+main {
+  flex: 1; /* cresce e empurra o footer pro fim */
+}
+
 footer {
     text-align: center;
     padding: 1.5rem;
     background: #112240;
     color: var(--cinza);
 }
-
-
-
-
-
 
 .tecnologias {
     text-align: center;
