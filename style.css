@@ -111,6 +111,14 @@ body {
 
 /* Sobre */
 
+#sobre {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  text-align: center; 
+  padding: 2rem; /* espaçamento interno */
+}
 
 
 .sobre-content {
