@@ -1,7 +1,7 @@
 :root {
-    --azul-principal: #1E90FF;
+    --azul-principal: #871eff;
     --azul-escuro: #0A192F;
-    --azul-claro: #64FFDA;
+    --azul-claro: #ff64c4;
     --branco: #FFFFFF;
     --cinza: #8892B0;
 }
@@ -13,9 +13,15 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     text-align: center;
-    -family: "Poppins", sans-serif;
+    font-family: 'Nunito', sans-serif;
     background: var(--azul-escuro);
     color: var(--branco);
     scroll-behavior: smooth;
@@ -112,12 +118,13 @@ body {
 /* Sobre */
 
 #sobre {
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center; 
-  text-align: center; 
-  padding: 2rem; /* espaçamento interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    /* espaçamento interno */
 }
 
 
@@ -172,7 +179,7 @@ body {
 }
 
 /* Contato */
-.contato form {
+form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -180,12 +187,26 @@ body {
     margin: auto;
 }
 
-.contato input,
-.contato textarea {
+form input,
+form textarea {
     padding: 0.8rem;
-    border-radius: 8px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+form button {
+    padding: 0.8rem;
+    background: var(--primary);
+    color: white;
     border: none;
-    outline: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: var(--secondary);
 }
 
 .whatsapp-btn {
@@ -202,7 +223,8 @@ body {
 /* Footer */
 
 main {
-  flex: 1; /* cresce e empurra o footer pro fim */
+    flex: 1;
+    /* cresce e empurra o footer pro fim */
 }
 
 footer {
@@ -221,7 +243,6 @@ footer {
 .tecnologias h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    font-family: 'Poppins', sans-serif;
 }
 
 .cards {
@@ -257,3 +278,4 @@ footer {
     transform: translateY(-5px) scale(1.05);
     background: #0A192F;
 }
+

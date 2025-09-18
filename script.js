@@ -32,7 +32,7 @@ function animate() {
   particles.forEach(p => {
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255,255,255,0.5)";
+    ctx.fillStyle = "rgba(211, 99, 202, 0.5)";
     ctx.fill();
     p.x += p.dx;
     p.y += p.dy;
