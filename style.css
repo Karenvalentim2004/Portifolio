@@ -116,26 +116,22 @@ body {
 
 
 /* Sobre */
-
 #sobre {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 2rem;
-    /* espaçamento interno */
+    padding: 6rem 2rem 2rem;
 }
 
-
-.sobre-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 3rem 1rem;
-    gap: 2rem;
-    flex-wrap: wrap;
+.card {
+    width: 100%;
+    max-width: 700px;
+    background: #1b263b;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    margin-top: 2rem;
 }
 
 /* Projetos */
