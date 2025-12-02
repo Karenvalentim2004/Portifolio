@@ -2,6 +2,7 @@
     --azul-principal: #1E90FF;
     --azul-escuro: #0A192F;
     --azul-claro: #64FFDA;
+    --rosa-claro: #ff64c4;
     --branco: #FFFFFF;
     --cinza: #8892B0;
 }
@@ -37,7 +38,7 @@ body {
 }
 
 .logo {
-    color: var(--azul-principal);
+    color: var(--branco);
     font-family: 'Nunito', sans-serif;
 }
 
@@ -54,7 +55,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: var(--azul-claro);
+    color: var(--rosa-claro);
 }
 
 main {
@@ -65,89 +66,11 @@ footer {
     text-align: center;
     padding: 1.5rem;
     background: #112240;
-    color: var(--cinza);
+    color: var(--branco);
 }
 
-
-
-.projetos {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #0d1b2a; /* fundo escuro */
-  color: #fff;
-}
-
-.projetos h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #fff;
-}
-
-.projetos p {
-  margin-bottom: 2rem;
-  color: #aaa;
-}
-
-.projetos-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.card-projeto {
-  background: #1b263b;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.card-projeto:hover {
-  transform: translateY(-10px);
-}
-
-.card-projeto img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.info-projeto {
-  padding: 1rem;
-}
-
-.info-projeto h3 {
-  margin: 0.5rem 0;
-  color: #f9a826;
-}
-
-.info-projeto p {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  color: #ccc;
-}
-
-.info-projeto a {
-  display: inline-block;
-  margin: 0.3rem;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-family: 'Nunito', sans-serif;
-  transition: 0.3s;
-}
-
-.info-projeto a:first-child {
-  background: #0077ff;
-  color: #fff;
-}
-
-.info-projeto a.demo {
-  background: #f9a826;
-  color: #000;
-}
-
-.info-projeto a:hover {
-  opacity: 0.8;
+.socials a {
+    color: var(--branco);
+    text-decoration: none;
 }
 
