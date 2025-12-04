@@ -24,84 +24,109 @@
             </ul>
         </nav>
     </header>
-    <br> <br> <br> 
+    <br> <br> <br>
 
-    <section id="projetos">
-        <div class="container-projetos">
-            <h1 class="titulo-projetos">Meus Projetos</h1>
+    <section class="projetos-container">
 
-            <div class="cards-projetos">
+        <!-- CARD 1 -->
+        <div class="card open-modal" data-img="imagens/noite.jpg" data-title="Brigs Confeitaria" data-date="Maio 2025"
+            data-desc="Plataforma de vendas online para doces e confeitaria.">
 
-                <!-- Card do Projeto -->
-                <div class="projeto-item">
+            <img src="imagens/noite.jpg" class="card-img">
 
-                    <!-- Imagem com overlay + fullscreen -->
-                    <div class="projeto-img-wrapper">
-                        <img src="imagens/noite.jpg" alt="Brigs Doce">
-                        <button class="botao-fullscreen" data-img="imagens/noite.jpg" data-title="Brigs Doce"
-                            data-mes-ano="Maio 2025"
-                            data-desc="Uma loja de doces com uma variedade de guloseimas e um design atraente."
-                            data-link="https://brigs-react.vercel.app/">
-                        </button>
-                    </div>
-
-                    <!-- Título -->
-                    <h2 class="titulo-projeto">Brigs Doce</h2>
-
-                    <!-- Botão GitHub -->
-                    <a class="ver-github" href="https://github.com/Karenvalentim2004/brigs-react.git" target="_blank">
-                        Ver no GitHub
-                        <img src="imagens/github.png" alt="GitHub">
-                    </a>
-
-                    <!-- Descrição -->
-                    <p class="descricao-card">
-                        Loja de doces.
-                    </p>
-                </div>
-
+            <div class="card-content">
+                <h3>Brigs Confeitaria</h3>
             </div>
         </div>
+
+        <!-- CARD 2 -->
+        <div class="card open-modal" data-img="imagens/noite.jpg" data-title="CyberLab" data-date="Maio 2025"
+            data-desc="Plataforma educacional interativa sobre cibersegurança.">
+
+            <img src="imagens/noite.jpg" class="card-img">
+
+            <div class="card-content">
+                <h3>CyberLab</h3>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card open-modal" data-img="imagens/noite.jpg" data-title="Sistema Delivery" data-date="Agosto 2024"
+            data-desc="Sistema completo de entregas com painel administrativo.">
+
+            <img src="imagens/noite.jpg" class="card-img">
+
+            <div class="card-content">
+                <h3>Sistema Delivery</h3>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card open-modal" data-img="imagens/noite.jpg" data-title="Portfolio 3D" data-date="Janeiro 2025"
+            data-desc="Portfólio com animações e interações 3D WebGL.">
+
+            <img src="imagens/noite.jpg" class="card-img">
+
+            <div class="card-content">
+                <h3>Portfólio 3D</h3>
+            </div>
+        </div>
+
     </section>
 
+    <!-- MODAL ÚNICO -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
 
-    <!-- LIGHTBOX (Fora da Section) -->
-    <div id="lightbox" class="lightbox">
-        <div class="lightbox-caixa">
+            <button class="close" onclick="modal.classList.remove('show')">✖</button>
 
-            <button class="fechar">&times;</button>
+            <div class="modal-left">
+                <img id="modal-img" class="modal-img">
+                <button class="preview-btn">Prévia <i class="bi bi-display"></i></button>
+            </div>
 
-            <div class="card-projeto">
+            <div class="modal-right">
 
-                <div class="col-esquerda">
-                    <img id="lb-img" src="" alt="">
-                    <a id="lb-link" href="#" target="_blank" class="btn-previa">
-                        Prévia
-                        <img src="imagens/noite.jpg" class="icon-previa">
-                    </a>
+                <div class="info-box">
+                    <h4>Nome do projeto</h4>
+                    <p id="modal-title"></p>
                 </div>
 
-                <div class="col-direita">
-                    <div class="info">
-                        <h3>Nome do projeto</h3>
-                        <h2 id="lb-titulo"></h2>
-                    </div>
+                <div class="info-box">
+                    <h4>Data de criação</h4>
+                    <p id="modal-date"></p>
+                </div>
 
-                    <div class="info">
-                        <h3>Data de criação</h3>
-                        <p id="lb-ano"></p>
-                    </div>
-
-                    <div class="info">
-                        <h3>Descrição</h3>
-                        <p id="lb-desc"></p>
-                    </div>
+                <div class="info-box">
+                    <h4>Descrição</h4>
+                    <p id="modal-desc"></p>
                 </div>
 
             </div>
+
         </div>
     </div>
 
+    <!-- MODAL -->
+    <script>
+const cards = document.querySelectorAll(".open-modal");
+const modal = document.getElementById("modal");
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+
+        document.getElementById("modal-img").src = card.dataset.img;
+        document.getElementById("modal-title").innerText = card.dataset.title;
+        document.getElementById("modal-date").innerText = card.dataset.date;
+        document.getElementById("modal-desc").innerText = card.dataset.desc;
+
+        modal.classList.add("show");
+    });
+});
+</script>
+
+    <!-- Ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 
     <footer>
