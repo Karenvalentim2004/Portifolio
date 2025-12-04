@@ -114,45 +114,6 @@ body {
   color: var(--azul-escuro);
 }
 
-
-/* Sobre */
-#sobre {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 6rem 2rem 2rem;
-}
-
-.card {
-  width: 100%;
-  max-width: 700px;
-  background: #1b263b;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  margin-top: 2rem;
-}
-
-/*Experiência */
-#experiencia {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.card {
-  width: 100%;
-  max-width: 700px;
-  background: #1b263b;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  margin-top: 2rem;
-}
-
 .timeline {
   padding: 4rem 2rem;
   background: var(--azul-escuro);
@@ -203,7 +164,7 @@ body {
 .timeline-item::before {
   content: '';
   position: absolute;
-  top: 15px;
+  top: 57px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -213,7 +174,7 @@ body {
 }
 
 .timeline-item:nth-child(odd)::before {
-  right: -10px;
+  right: -15px;
 }
 
 .timeline-item:nth-child(even)::before {
@@ -222,7 +183,7 @@ body {
 
 .timeline-content {
   padding: 1rem;
-  background: #1b263b;
+  background:  #273857;
   border-radius: 12px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
@@ -242,45 +203,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Projetos */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.card img {
-  width: 100%;
-  display: block;
-  transition: 0.5s;
-}
-
-.card:hover img {
-  transform: scale(1.1);
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: var(--branco);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.card:hover .overlay {
-  opacity: 1;
-}
 
 /* Contato */
 form {
@@ -320,7 +242,7 @@ form button:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
+  background: #167037;
   color: white;
   padding: 0.8rem 1rem;
   border-radius: 50px;
@@ -366,14 +288,14 @@ footer {
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  max-width: 1000px;
+  width: 80%;
   margin: auto;
 }
 
 .skills-box {
-  background: #1b263b;
+  background: #273857;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);

@@ -62,6 +62,244 @@ main {
     flex: 1;
 }
 
+/*seção projetos*/
+
+
+/* Card */
+.projeto-item {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Imagem wrapper */
+.projeto-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Imagem */
+.projeto-img-wrapper img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+/* Overlay escuro */
+.projeto-img-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    opacity: 0;
+    transition: .3s;
+    z-index: 1;
+}
+
+/* Ícone grande no centro */
+.projeto-img-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("svgs/display.svg") center/60px no-repeat;
+    opacity: 0;
+    transition: .3s;
+    z-index: 2;
+}
+
+/* Hover */
+.projeto-img-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.projeto-img-wrapper:hover::before,
+.projeto-img-wrapper:hover::after {
+    opacity: 1;
+}
+
+/* Botão fullscreen */
+.botao-fullscreen {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    background: url("svgs/full.svg") center/contain no-repeat;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    filter: invert(80%) hue-rotate(80deg);
+}
+
+/* Título */
+.titulo-projeto {
+    color: var(--cor-primaria);
+    font-family: "texto";
+    margin-top: 1rem;
+}
+
+/* Botão GitHub */
+.ver-github {
+    margin-top: .5rem;
+    background: var(--cor-primaria);
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    border-radius: 8px;
+    color: black;
+    font-family: "texto";
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ver-github img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Descrição */
+.descricao-card {
+    font-family: "texto";
+    font-size: 1.1rem;
+    color: white;
+    margin-top: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+
+/* GRID */
+.cards-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 4rem;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .cards-projetos { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .cards-projetos { grid-template-columns: 1fr; }
+}
+
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox-caixa {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 1100px;
+    width: 90%;
+    position: relative;
+}
+
+.card-projeto {
+    display: flex;
+    height: 520px;
+    background: rgba(255,255,255,.08);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,.15);
+    overflow: hidden;
+}
+
+
+/* Coluna esquerda */
+.col-esquerda {
+    width: 50%;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.col-esquerda img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Botão prévia */
+.btn-previa {
+    background: var(--cor-primaria);
+    padding: 12px;
+    border-radius: 8px;
+    font-family: "texto";
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+    text-decoration: none;
+}
+
+.icon-previa {
+    width: 26px;
+    filter: invert(1);
+}
+
+/* Coluna direita */
+.col-direita {
+    width: 50%;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Caixas info */
+.info {
+    background: rgba(255,255,255,.08);
+    border-radius: 10px;
+    padding: 1rem;
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+.info h3 {
+    color: var(--cor-primaria);
+    font-family: "texto";
+    margin-bottom: .5rem;
+}
+
+/* Fechar */
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/* footer */
+
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -73,4 +311,3 @@ footer {
     color: var(--branco);
     text-decoration: none;
 }
-
