@@ -62,14 +62,13 @@ main {
     flex: 1;
 }
 
-/*seção projetos*/
 
-
-.projetos-container {
+/* GRID DE PROJETOS */
+.projetos-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
-    padding: 40px;
+    padding: 20px;
 }
 
 /* CARD */
@@ -78,7 +77,7 @@ main {
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     transition: .3s;
 }
 
@@ -92,33 +91,43 @@ main {
     object-fit: cover;
 }
 
+/* Nome + botões */
 .card-content {
-    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8rem 1rem;
     color: #fff;
 }
 
 .card-buttons {
-    margin-top: 10px;
+    display: flex;
+    gap: .5rem;
 }
 
 .card-buttons .btn {
-    background: #64FFDA;
+    background: none;
     border: none;
-    padding: 8px;
-    border-radius: 50%;
+    font-size: 1.3rem;
+    color: white;
     cursor: pointer;
+    transition: .3s;
 }
 
+.card-buttons .btn:hover {
+    transform: scale(1.2);
+    color: #64ffda;
+}
 
+/* MODAL */
 .modal {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, .7);
     display: none;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    backdrop-filter: blur(4px);
 }
 
 .modal.show {
@@ -126,68 +135,63 @@ main {
 }
 
 .modal-content {
-    background: #1A1E27;
-    border-radius: 14px;
-    padding: 25px;
-    display: flex;
-    gap: 30px;
+    background: #1a1f2e;
     width: 80%;
-    max-width: 1000px;
+    max-width: 900px;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
     position: relative;
-    color: #fff;
 }
 
-/* FECHAR */
 .close {
     position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 22px;
-    background: transparent;
+    right: 20px;
+    top: 15px;
+    background: none;
     border: none;
+    color: white;
+    font-size: 22px;
     cursor: pointer;
-    color: #fff;
 }
 
-/* LADO ESQUERDO */
 .modal-left {
     width: 50%;
 }
 
 .modal-img {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 .preview-btn {
     margin-top: 15px;
-    width: 100%;
-    padding: 12px;
-    background: #00FF7F;
-    border: none;
+    display: inline-block;
+    padding: 10px 18px;
+    background: #64ffda;
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
     font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
 }
 
-/* LADO DIREITO */
 .modal-right {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    color: white;
 }
 
 .info-box {
-    background: #2B313C;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 12px;
+    background: #2b3245;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .info-box h4 {
-    margin-bottom: 8px;
-    color: #00FF7F;
+    color: #ff64c4;
 }
+
 
 /* footer */
 

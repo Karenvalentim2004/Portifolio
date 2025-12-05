@@ -26,63 +26,74 @@
     </header>
     <br> <br> <br>
 
-    <section class="projetos-container">
+    <section class="projetos-grid">
 
         <!-- CARD 1 -->
-        <div class="card open-modal" data-img="imagens/noite.jpg" data-title="Brigs Confeitaria" data-date="Maio 2025"
-            data-desc="Plataforma de vendas online para doces e confeitaria.">
+        <div class="card" data-title="Brigs Confeitaria" data-img="imagens/noite.jpg" data-date="Maio 2025"
+            data-desc="Plataforma de vendas online para doces e confeitaria, com design moderno e intuitivo."
+            data-preview="https://seu-site.com">
 
             <img src="imagens/noite.jpg" class="card-img">
 
             <div class="card-content">
                 <h3>Brigs Confeitaria</h3>
+
+                <div class="card-buttons">
+                    <a href="https://github.com/seuRepo1" target="_blank" class="btn"><i class="bi bi-github"></i></a>
+                    <button class="btn open-modal"><i class="bi bi-eye"></i></button>
+                </div>
             </div>
         </div>
 
         <!-- CARD 2 -->
-        <div class="card open-modal" data-img="imagens/noite.jpg" data-title="CyberLab" data-date="Maio 2025"
-            data-desc="Plataforma educacional interativa sobre cibersegurança.">
+        <div class="card" data-title="CyberLab" data-img="imagens/noite.jpg" data-date="Junho 2025"
+            data-desc="Plataforma educacional de cibersegurança com recursos visuais imersivos."
+            data-preview="https://seu-site.com">
 
             <img src="imagens/noite.jpg" class="card-img">
 
             <div class="card-content">
                 <h3>CyberLab</h3>
+
+                <div class="card-buttons">
+                    <a href="https://github.com/seuRepo2" target="_blank" class="btn"><i class="bi bi-github"></i></a>
+                    <button class="btn open-modal"><i class="bi bi-eye"></i></button>
+                </div>
             </div>
         </div>
 
+
         <!-- CARD 3 -->
-        <div class="card open-modal" data-img="imagens/noite.jpg" data-title="Sistema Delivery" data-date="Agosto 2024"
-            data-desc="Sistema completo de entregas com painel administrativo.">
+        <div class="card" data-title="Sistema Delivery" data-img="imagens/noite.jpg" data-date="Abril 2025"
+            data-desc="Sistema completo para entregadores com login, pedidos e mapa."
+            data-preview="https://seu-site.com">
 
             <img src="imagens/noite.jpg" class="card-img">
 
             <div class="card-content">
                 <h3>Sistema Delivery</h3>
-            </div>
-        </div>
 
-        <!-- CARD 4 -->
-        <div class="card open-modal" data-img="imagens/noite.jpg" data-title="Portfolio 3D" data-date="Janeiro 2025"
-            data-desc="Portfólio com animações e interações 3D WebGL.">
-
-            <img src="imagens/noite.jpg" class="card-img">
-
-            <div class="card-content">
-                <h3>Portfólio 3D</h3>
+                <div class="card-buttons">
+                    <a href="https://github.com/seuRepo3" target="_blank" class="btn"><i class="bi bi-github"></i></a>
+                    <button class="btn open-modal"><i class="bi bi-eye"></i></button>
+                </div>
             </div>
         </div>
 
     </section>
 
     <!-- MODAL ÚNICO -->
-    <div class="modal" id="modal">
+    <div class="modal" id="modal-projeto">
         <div class="modal-content">
 
-            <button class="close" onclick="modal.classList.remove('show')">✖</button>
+            <button class="close">✖</button>
 
             <div class="modal-left">
                 <img id="modal-img" class="modal-img">
-                <button class="preview-btn">Prévia <i class="bi bi-display"></i></button>
+
+                <a id="modal-preview" class="preview-btn" target="_blank">
+                    Prévia <i class="bi bi-display"></i>
+                </a>
             </div>
 
             <div class="modal-right">
@@ -103,27 +114,10 @@
                 </div>
 
             </div>
-
         </div>
     </div>
 
-    <!-- MODAL -->
-    <script>
-const cards = document.querySelectorAll(".open-modal");
-const modal = document.getElementById("modal");
-
-cards.forEach(card => {
-    card.addEventListener("click", () => {
-
-        document.getElementById("modal-img").src = card.dataset.img;
-        document.getElementById("modal-title").innerText = card.dataset.title;
-        document.getElementById("modal-date").innerText = card.dataset.date;
-        document.getElementById("modal-desc").innerText = card.dataset.desc;
-
-        modal.classList.add("show");
-    });
-});
-</script>
+    <script src="projetos.js"></script>
 
     <!-- Ícones do Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -138,15 +132,6 @@ cards.forEach(card => {
         </div>
     </footer>
 
-    <script defer src="projeto.js"></script>
-
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
 </body>
 
 </html>
